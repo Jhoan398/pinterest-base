@@ -3,19 +3,28 @@ import Header from './Header';
 import PinCard from './PinCard';
 import HeaderMobile from './HeaderMobile';
 import FooterMobile from './FooterMobile';
-
+import { useMediaQuery } from 'react-responsive'
 const PinterestLayout = () => {
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1224px)'
+      })
+    const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
+    const isMobile = useMediaQuery({ query: '(max-width: 600px)' })
+    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+    const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
     return (
         <>
-            <HeaderMobile></HeaderMobile>
+        {isDesktopOrLaptop && <Header/>}
+        {isMobile && <HeaderMobile/>}
+            
             <div style ={_stylesLayout.pint_container}>
                 
                 {_data.map(data =>
                     
-                    <PinCard key={data.id} size={data.size} image={`https://picsum.photos/id/${Math.floor((Math.random() * (1070 - 1000 + 1)) + 1000)}/500/500`} />
+                    <PinCard key={data.id} size={data.size} image={`https://picsum.photos/id/${data.id}/500/500`} />
                 )}
             </div>
-            <FooterMobile></FooterMobile>
+            {isMobile && <FooterMobile/>}
         </>
        
     );
@@ -38,39 +47,39 @@ const _stylesLayout = {
 };
 const _data = [
     {
-        id: 1,
+        id: 21,
         size: "small"
     },
     {
-        id: 2,
+        id: 22,
         size: "large"
     },
     {
-        id: 3,
+        id: 23,
         size: "medium"
     },
     {
-        id: 4,
+        id: 24,
         size: "large"
     },
     {
-        id: 5,
+        id: 52,
         size: "medium"
     },
     {
-        id: 6,
+        id: 26,
         size: "small"
     },
     {
-        id: 7,
+        id: 27,
         size: "large"
     },
     {
-        id: 8,
+        id: 28,
         size: "medium"
     },
     {
-        id: 9,
+        id: 29,
         size: "large"
     },
     {
