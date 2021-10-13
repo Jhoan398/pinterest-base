@@ -1,26 +1,20 @@
 import React from 'react';
+import Header from './Header';
 import PinCard from './PinCard';
 
 const PinterestLayout = () => {
     return (
-    <div style ={_stylesLayout.pint_container}>
-        <PinCard size ='small'/>
-        <PinCard size ='medium'/>
-        <PinCard size ='large'/>
-        <PinCard size ='small'/>
-        <PinCard size ='small'/>
-        <PinCard size ='medium'/>
-        <PinCard size ='large'/>
-        <PinCard size ='small'/>
-        <PinCard size ='small'/>
-        <PinCard size ='medium'/>
-        <PinCard size ='large'/>
-        <PinCard size ='small'/>
-        <PinCard size ='small'/>
-        <PinCard size ='medium'/>
-        <PinCard size ='large'/>
-        <PinCard size ='small'/>
-    </div>
+        <>
+            <Header></Header>
+            <div style ={_stylesLayout.pint_container}>
+                
+                {_data.map(data =>
+                    
+                    <PinCard key={data.id} size={data.size} image={`https://picsum.photos/id/${Math.floor((Math.random() * (1070 - 1000 + 1)) + 1000)}/500/500`} />
+                )}
+            </div>
+        </>
+       
     );
 };
 
@@ -39,5 +33,90 @@ const _stylesLayout = {
         justifyContent: 'center',
     },
 };
+const _data = [
+    {
+        id: 1,
+        size: "small"
+    },
+    {
+        id: 2,
+        size: "large"
+    },
+    {
+        id: 3,
+        size: "medium"
+    },
+    {
+        id: 4,
+        size: "large"
+    },
+    {
+        id: 5,
+        size: "medium"
+    },
+    {
+        id: 6,
+        size: "small"
+    },
+    {
+        id: 7,
+        size: "large"
+    },
+    {
+        id: 8,
+        size: "medium"
+    },
+    {
+        id: 9,
+        size: "large"
+    },
+    {
+        id: 10,
+        size: "medium"
+    },
+    {
+        id: 11,
+        size: "small"
+    },
+    {
+        id: 12,
+        size: "large"
+    },
+    {
+        id: 13,
+        size: "medium"
+    },
+    {
+        id: 14,
+        size: "large"
+    },
+    {
+        id: 15,
+        size: "medium"
+    },
+    {
+        id: 16,
+        size: "small"
+    },
+    {
+        id: 17,
+        size: "large"
+    },
+    {
+        id: 18,
+        size: "medium"
+    },
+    {
+        id: 19,
+        size: "large"
+    },
+    {
+        id: 20,
+        size: "medium"
+    }
+    
+    
+];
+
 
 export default PinterestLayout;
