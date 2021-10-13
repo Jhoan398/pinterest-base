@@ -1,11 +1,13 @@
 import React from 'react';
 import Header from './Header';
 import PinCard from './PinCard';
+import HeaderMobile from './HeaderMobile';
+import FooterMobile from './FooterMobile';
 
 const PinterestLayout = () => {
     return (
         <>
-            <Header></Header>
+            <HeaderMobile></HeaderMobile>
             <div style ={_stylesLayout.pint_container}>
                 
                 {_data.map(data =>
@@ -13,6 +15,7 @@ const PinterestLayout = () => {
                     <PinCard key={data.id} size={data.size} image={`https://picsum.photos/id/${Math.floor((Math.random() * (1070 - 1000 + 1)) + 1000)}/500/500`} />
                 )}
             </div>
+            <FooterMobile></FooterMobile>
         </>
        
     );
