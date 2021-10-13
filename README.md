@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+You can donwload the libraries with the next command:
+
+### `npm install`
+
 In the project directory, you can run:
 
 ### `npm start`
@@ -68,3 +72,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Pinterest index
+
+This project was created by Jhoan Saldarriaga and Daniel Arevalo.
+we used libraries like react responsive, that permit use the hooks for detect the dimension and we do  a condition that if is it the window show it.
+
